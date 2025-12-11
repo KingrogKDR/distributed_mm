@@ -212,7 +212,7 @@ python3 server.py --privacy --masks 32
 
 ---
 
-## 🚧 Future Improvements (optional)
+## 🚧 Future Improvements 
 
 - Dockerfile + docker-compose cluster
 - gRPC transport instead of WebSockets
@@ -221,8 +221,3 @@ python3 server.py --privacy --masks 32
 - Coded computing (straggler-robust polynomial codes)
 - Horizontal scaling with Redis queue or Ray
 
----
-
-## 📝 License
-
-MIT
