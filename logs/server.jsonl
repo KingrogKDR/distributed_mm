@@ -1,256 +1,28 @@
-{"ts": "2025-12-11T18:52:52.925756Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T18:52:52.926133Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T18:52:53.934230Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T18:52:53.934486Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T18:52:53.934844Z", "event": "dispatch", "task_id": "1_1_+_6_3", "worker_id": "w2"}
-{"ts": "2025-12-11T18:52:53.935154Z", "event": "dispatch", "task_id": "0_0_-_7_3", "worker_id": "w1"}
-{"ts": "2025-12-11T18:52:53.935433Z", "event": "result_received", "task_id": "1_1_+_6_3", "worker_id": "w2", "latency_seconds": 0.0006036758422851562}
-{"ts": "2025-12-11T18:52:53.935698Z", "event": "dispatch", "task_id": "1_0_-_6_1", "worker_id": "w2"}
-{"ts": "2025-12-11T18:52:53.935966Z", "event": "result_received", "task_id": "0_0_-_7_3", "worker_id": "w1", "latency_seconds": 0.000812530517578125}
-{"ts": "2025-12-11T18:52:53.936089Z", "event": "dispatch", "task_id": "1_1_-_6_3", "worker_id": "w1"}
-{"ts": "2025-12-11T18:52:53.936389Z", "event": "result_received", "task_id": "1_0_-_6_1", "worker_id": "w2", "latency_seconds": 0.0006999969482421875}
-{"ts": "2025-12-11T18:52:53.936503Z", "event": "dispatch", "task_id": "1_0_+_6_1", "worker_id": "w2"}
-{"ts": "2025-12-11T18:52:53.936801Z", "event": "result_received", "task_id": "1_1_-_6_3", "worker_id": "w1", "latency_seconds": 0.0007200241088867188}
-{"ts": "2025-12-11T18:52:53.936915Z", "event": "dispatch", "task_id": "0_1_-_7_6", "worker_id": "w1"}
-{"ts": "2025-12-11T18:52:53.937209Z", "event": "result_received", "task_id": "1_0_+_6_1", "worker_id": "w2", "latency_seconds": 0.0006964206695556641}
-{"ts": "2025-12-11T18:52:53.937332Z", "event": "dispatch", "task_id": "0_0_+_7_3", "worker_id": "w2"}
-{"ts": "2025-12-11T18:52:53.937625Z", "event": "result_received", "task_id": "0_1_-_7_6", "worker_id": "w1", "latency_seconds": 0.0007050037384033203}
-{"ts": "2025-12-11T18:52:53.937753Z", "event": "dispatch", "task_id": "0_1_+_7_6", "worker_id": "w1"}
-{"ts": "2025-12-11T18:52:53.938047Z", "event": "result_received", "task_id": "0_0_+_7_3", "worker_id": "w2", "latency_seconds": 0.0007185935974121094}
-{"ts": "2025-12-11T18:52:53.938337Z", "event": "result_received", "task_id": "0_1_+_7_6", "worker_id": "w1", "latency_seconds": 0.0005848407745361328}
-{"ts": "2025-12-11T18:52:53.938547Z", "event": "aggregation_done", "elapsed_seconds": 1.0122950077056885, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T18:52:53.938696Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T18:52:53.938792Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T18:52:53.939792Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:52:53.940027Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:52:53.940240Z", "event": "server_stop"}
-{"ts": "2025-12-11T18:53:14.211998Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T18:53:14.212235Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T18:53:15.240480Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T18:53:15.240788Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T18:53:15.245062Z", "event": "dispatch", "task_id": "1_0_+_7_3", "worker_id": "w1"}
-{"ts": "2025-12-11T18:53:15.245338Z", "event": "dispatch", "task_id": "0_1_+_2_5", "worker_id": "w3"}
-{"ts": "2025-12-11T18:53:15.245659Z", "event": "result_received", "task_id": "1_0_+_7_3", "worker_id": "w1", "latency_seconds": 0.0006158351898193359}
-{"ts": "2025-12-11T18:53:15.245933Z", "event": "dispatch", "task_id": "1_1_+_5_0", "worker_id": "w1"}
-{"ts": "2025-12-11T18:53:15.246238Z", "event": "result_received", "task_id": "0_1_+_2_5", "worker_id": "w3", "latency_seconds": 0.0009253025054931641}
-{"ts": "2025-12-11T18:53:15.246391Z", "event": "dispatch", "task_id": "1_1_-_5_0", "worker_id": "w3"}
-{"ts": "2025-12-11T18:53:15.246740Z", "event": "result_received", "task_id": "1_1_+_5_0", "worker_id": "w1", "latency_seconds": 0.0008065700531005859}
-{"ts": "2025-12-11T18:53:15.246860Z", "event": "dispatch", "task_id": "0_0_-_1_0", "worker_id": "w1"}
-{"ts": "2025-12-11T18:53:15.247165Z", "event": "result_received", "task_id": "1_1_-_5_0", "worker_id": "w3", "latency_seconds": 0.0007758140563964844}
-{"ts": "2025-12-11T18:53:15.247296Z", "event": "dispatch", "task_id": "0_1_-_2_5", "worker_id": "w3"}
-{"ts": "2025-12-11T18:53:15.247707Z", "event": "result_received", "task_id": "0_0_-_1_0", "worker_id": "w1", "latency_seconds": 0.0008187294006347656}
-{"ts": "2025-12-11T18:53:15.247854Z", "event": "dispatch", "task_id": "1_0_-_7_3", "worker_id": "w1"}
-{"ts": "2025-12-11T18:53:15.248473Z", "event": "result_received", "task_id": "0_1_-_2_5", "worker_id": "w3", "latency_seconds": 0.0011742115020751953}
-{"ts": "2025-12-11T18:53:15.248596Z", "event": "dispatch", "task_id": "0_0_+_1_0", "worker_id": "w3"}
-{"ts": "2025-12-11T18:53:15.248949Z", "event": "result_received", "task_id": "1_0_-_7_3", "worker_id": "w1", "latency_seconds": 0.001100778579711914}
-{"ts": "2025-12-11T18:53:15.249674Z", "event": "result_received", "task_id": "0_0_+_1_0", "worker_id": "w3", "latency_seconds": 0.0010526180267333984}
-{"ts": "2025-12-11T18:53:15.249967Z", "event": "aggregation_done", "elapsed_seconds": 1.0376040935516357, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T18:53:15.250157Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T18:53:15.250282Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T18:53:15.250765Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T18:53:15.251621Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:53:15.251876Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:53:15.252105Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:53:15.252280Z", "event": "server_stop"}
-{"ts": "2025-12-11T18:54:53.386079Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T18:54:53.386318Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T18:54:54.396146Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T18:54:54.396651Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T18:54:54.396885Z", "event": "dispatch", "task_id": "1_0_+_3_7", "worker_id": "w3"}
-{"ts": "2025-12-11T18:54:54.397177Z", "event": "dispatch", "task_id": "0_1_-_5_2", "worker_id": "w2"}
-{"ts": "2025-12-11T18:54:54.397442Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T18:54:54.397703Z", "event": "result_received", "task_id": "1_0_+_3_7", "worker_id": "w3", "latency_seconds": 0.0008156299591064453}
-{"ts": "2025-12-11T18:54:54.397827Z", "event": "dispatch", "task_id": "0_1_+_5_2", "worker_id": "w1"}
-{"ts": "2025-12-11T18:54:54.398130Z", "event": "result_received", "task_id": "0_1_-_5_2", "worker_id": "w2", "latency_seconds": 0.0009541511535644531}
-{"ts": "2025-12-11T18:54:54.398244Z", "event": "dispatch", "task_id": "1_1_-_3_2", "worker_id": "w2"}
-{"ts": "2025-12-11T18:54:54.398513Z", "event": "dispatch", "task_id": "1_0_-_3_7", "worker_id": "w3"}
-{"ts": "2025-12-11T18:54:54.398795Z", "event": "result_received", "task_id": "0_1_+_5_2", "worker_id": "w1", "latency_seconds": 0.0009627342224121094}
-{"ts": "2025-12-11T18:54:54.398908Z", "event": "dispatch", "task_id": "0_0_-_4_5", "worker_id": "w1"}
-{"ts": "2025-12-11T18:54:54.399186Z", "event": "result_received", "task_id": "1_1_-_3_2", "worker_id": "w2", "latency_seconds": 0.0009386539459228516}
-{"ts": "2025-12-11T18:54:54.399294Z", "event": "dispatch", "task_id": "0_0_+_4_5", "worker_id": "w2"}
-{"ts": "2025-12-11T18:54:54.399566Z", "event": "result_received", "task_id": "1_0_-_3_7", "worker_id": "w3", "latency_seconds": 0.0010533332824707031}
-{"ts": "2025-12-11T18:54:54.399694Z", "event": "dispatch", "task_id": "1_1_+_3_2", "worker_id": "w3"}
-{"ts": "2025-12-11T18:54:54.399982Z", "event": "result_received", "task_id": "0_0_-_4_5", "worker_id": "w1", "latency_seconds": 0.0010688304901123047}
-{"ts": "2025-12-11T18:54:54.400313Z", "event": "result_received", "task_id": "0_0_+_4_5", "worker_id": "w2", "latency_seconds": 0.0010118484497070312}
-{"ts": "2025-12-11T18:54:54.400624Z", "event": "result_received", "task_id": "1_1_+_3_2", "worker_id": "w3", "latency_seconds": 0.0009348392486572266}
-{"ts": "2025-12-11T18:54:54.400849Z", "event": "aggregation_done", "elapsed_seconds": 1.0144176483154297, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T18:54:54.400997Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T18:54:54.401102Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T18:54:54.401941Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:54:54.402196Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:54:54.402415Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:54:54.402627Z", "event": "server_stop"}
-{"ts": "2025-12-11T18:55:02.142849Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T18:55:02.143133Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T18:55:03.149912Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T18:55:03.150180Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:03.150450Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:03.150583Z", "event": "dispatch", "task_id": "1_0_-_0_3", "worker_id": "w3"}
-{"ts": "2025-12-11T18:55:03.150881Z", "event": "dispatch", "task_id": "1_1_-_4_2", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:03.151165Z", "event": "dispatch", "task_id": "1_0_+_0_3", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:03.151452Z", "event": "result_received", "task_id": "1_0_-_0_3", "worker_id": "w3", "latency_seconds": 0.0008661746978759766}
-{"ts": "2025-12-11T18:55:03.151579Z", "event": "dispatch", "task_id": "0_1_+_6_7", "worker_id": "w3"}
-{"ts": "2025-12-11T18:55:03.151900Z", "event": "result_received", "task_id": "1_1_-_4_2", "worker_id": "w2", "latency_seconds": 0.0010166168212890625}
-{"ts": "2025-12-11T18:55:03.152023Z", "event": "dispatch", "task_id": "1_1_+_4_2", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:03.152318Z", "event": "result_received", "task_id": "1_0_+_0_3", "worker_id": "w1", "latency_seconds": 0.0011508464813232422}
-{"ts": "2025-12-11T18:55:03.152439Z", "event": "dispatch", "task_id": "0_0_+_5_5", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:03.152737Z", "event": "result_received", "task_id": "0_1_+_6_7", "worker_id": "w3", "latency_seconds": 0.001157522201538086}
-{"ts": "2025-12-11T18:55:03.152853Z", "event": "dispatch", "task_id": "0_0_-_5_5", "worker_id": "w3"}
-{"ts": "2025-12-11T18:55:03.153191Z", "event": "result_received", "task_id": "1_1_+_4_2", "worker_id": "w2", "latency_seconds": 0.0011513233184814453}
-{"ts": "2025-12-11T18:55:03.153354Z", "event": "dispatch", "task_id": "0_1_-_6_7", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:03.153699Z", "event": "result_received", "task_id": "0_0_+_5_5", "worker_id": "w1", "latency_seconds": 0.0012433528900146484}
-{"ts": "2025-12-11T18:55:03.154020Z", "event": "result_received", "task_id": "0_0_-_5_5", "worker_id": "w3", "latency_seconds": 0.0011584758758544922}
-{"ts": "2025-12-11T18:55:03.154364Z", "event": "result_received", "task_id": "0_1_-_6_7", "worker_id": "w2", "latency_seconds": 0.0010175704956054688}
-{"ts": "2025-12-11T18:55:03.154575Z", "event": "aggregation_done", "elapsed_seconds": 1.0113246440887451, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T18:55:03.154735Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T18:55:03.154833Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T18:55:03.155880Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:55:03.156061Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:55:03.156263Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:55:03.156460Z", "event": "server_stop"}
-{"ts": "2025-12-11T18:55:26.644849Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T18:55:26.645086Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T18:55:27.653634Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:27.653884Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:27.654095Z", "event": "dispatch", "task_id": "0_0_+_1_7", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:27.654385Z", "event": "dispatch", "task_id": "1_1_-_5_4", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:27.654657Z", "event": "result_received", "task_id": "0_0_+_1_7", "worker_id": "w2", "latency_seconds": 0.0005643367767333984}
-{"ts": "2025-12-11T18:55:27.654960Z", "event": "dispatch", "task_id": "0_1_-_6_1", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:27.655289Z", "event": "result_received", "task_id": "1_1_-_5_4", "worker_id": "w1", "latency_seconds": 0.0009007453918457031}
-{"ts": "2025-12-11T18:55:27.655404Z", "event": "dispatch", "task_id": "0_1_+_6_1", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:27.655873Z", "event": "result_received", "task_id": "0_1_-_6_1", "worker_id": "w2", "latency_seconds": 0.0009207725524902344}
-{"ts": "2025-12-11T18:55:27.655987Z", "event": "dispatch", "task_id": "1_0_-_1_0", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:27.656323Z", "event": "result_received", "task_id": "0_1_+_6_1", "worker_id": "w1", "latency_seconds": 0.0009152889251708984}
-{"ts": "2025-12-11T18:55:27.656445Z", "event": "dispatch", "task_id": "1_0_+_1_0", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:27.657093Z", "event": "result_received", "task_id": "1_0_-_1_0", "worker_id": "w2", "latency_seconds": 0.0011036396026611328}
-{"ts": "2025-12-11T18:55:27.657204Z", "event": "dispatch", "task_id": "1_1_+_5_4", "worker_id": "w2"}
-{"ts": "2025-12-11T18:55:27.657492Z", "event": "result_received", "task_id": "1_0_+_1_0", "worker_id": "w1", "latency_seconds": 0.0010461807250976562}
-{"ts": "2025-12-11T18:55:27.657600Z", "event": "dispatch", "task_id": "0_0_-_1_7", "worker_id": "w1"}
-{"ts": "2025-12-11T18:55:27.657953Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T18:55:27.658064Z", "event": "result_received", "task_id": "1_1_+_5_4", "worker_id": "w2", "latency_seconds": 0.0008585453033447266}
-{"ts": "2025-12-11T18:55:27.658416Z", "event": "result_received", "task_id": "0_0_-_1_7", "worker_id": "w1", "latency_seconds": 0.0008099079132080078}
-{"ts": "2025-12-11T18:55:27.658698Z", "event": "aggregation_done", "elapsed_seconds": 1.013491153717041, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T18:55:27.658824Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T18:55:27.658909Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T18:55:27.659799Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:55:27.659969Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:55:27.660169Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T18:55:27.660355Z", "event": "server_stop"}
-{"ts": "2025-12-11T19:00:06.041245Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T19:00:06.041478Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T19:00:07.049893Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T19:00:07.050221Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T19:00:07.054528Z", "event": "dispatch", "task_id": "1_0_+_4_6", "worker_id": "w3"}
-{"ts": "2025-12-11T19:00:07.054795Z", "event": "dispatch", "task_id": "1_1_+_1_3", "worker_id": "w1"}
-{"ts": "2025-12-11T19:00:07.055491Z", "event": "result_received", "task_id": "1_0_+_4_6", "worker_id": "w3", "latency_seconds": 0.0009744167327880859}
-{"ts": "2025-12-11T19:00:07.055613Z", "event": "dispatch", "task_id": "0_1_-_4_1", "worker_id": "w3"}
-{"ts": "2025-12-11T19:00:07.055807Z", "event": "result_received", "task_id": "1_1_+_1_3", "worker_id": "w1", "latency_seconds": 0.0010161399841308594}
-{"ts": "2025-12-11T19:00:07.056113Z", "event": "dispatch", "task_id": "0_0_+_3_5", "worker_id": "w1"}
-{"ts": "2025-12-11T19:00:07.056295Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T19:00:07.056499Z", "event": "result_received", "task_id": "0_1_-_4_1", "worker_id": "w3", "latency_seconds": 0.0008809566497802734}
-{"ts": "2025-12-11T19:00:07.056609Z", "event": "dispatch", "task_id": "1_1_-_1_3", "worker_id": "w3"}
-{"ts": "2025-12-11T19:00:07.056895Z", "event": "dispatch", "task_id": "0_1_+_4_1", "worker_id": "w2"}
-{"ts": "2025-12-11T19:00:07.057204Z", "event": "result_received", "task_id": "0_0_+_3_5", "worker_id": "w1", "latency_seconds": 0.0010783672332763672}
-{"ts": "2025-12-11T19:00:07.057329Z", "event": "dispatch", "task_id": "0_0_-_3_5", "worker_id": "w1"}
-{"ts": "2025-12-11T19:00:07.057610Z", "event": "result_received", "task_id": "1_1_-_1_3", "worker_id": "w3", "latency_seconds": 0.0009942054748535156}
-{"ts": "2025-12-11T19:00:07.057733Z", "event": "dispatch", "task_id": "1_0_-_4_6", "worker_id": "w3"}
-{"ts": "2025-12-11T19:00:07.058017Z", "event": "result_received", "task_id": "0_1_+_4_1", "worker_id": "w2", "latency_seconds": 0.0011229515075683594}
-{"ts": "2025-12-11T19:00:07.058323Z", "event": "result_received", "task_id": "0_0_-_3_5", "worker_id": "w1", "latency_seconds": 0.0009903907775878906}
-{"ts": "2025-12-11T19:00:07.058612Z", "event": "result_received", "task_id": "1_0_-_4_6", "worker_id": "w3", "latency_seconds": 0.0008749961853027344}
-{"ts": "2025-12-11T19:00:07.058817Z", "event": "aggregation_done", "elapsed_seconds": 1.017228126525879, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T19:00:07.058985Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T19:00:07.059084Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T19:00:07.060038Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:00:07.060221Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:00:07.060429Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:00:07.060630Z", "event": "server_stop"}
-{"ts": "2025-12-11T19:05:00.750061Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T19:05:00.750396Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T19:05:01.762757Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T19:05:01.762959Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T19:05:01.763407Z", "event": "dispatch", "task_id": "1_0_-_2_7", "worker_id": "w1"}
-{"ts": "2025-12-11T19:05:01.763748Z", "event": "dispatch", "task_id": "1_1_+_0_3", "worker_id": "w2"}
-{"ts": "2025-12-11T19:05:01.764103Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T19:05:01.764246Z", "event": "result_received", "task_id": "1_0_-_2_7", "worker_id": "w1", "latency_seconds": 0.0008330345153808594}
-{"ts": "2025-12-11T19:05:01.764575Z", "event": "dispatch", "task_id": "1_0_+_2_7", "worker_id": "w1"}
-{"ts": "2025-12-11T19:05:01.764784Z", "event": "result_received", "task_id": "1_1_+_0_3", "worker_id": "w2", "latency_seconds": 0.00103759765625}
-{"ts": "2025-12-11T19:05:01.765049Z", "event": "dispatch", "task_id": "0_1_-_1_0", "worker_id": "w3"}
-{"ts": "2025-12-11T19:05:01.765333Z", "event": "dispatch", "task_id": "0_0_+_6_0", "worker_id": "w2"}
-{"ts": "2025-12-11T19:05:01.765620Z", "event": "result_received", "task_id": "1_0_+_2_7", "worker_id": "w1", "latency_seconds": 0.0010461807250976562}
-{"ts": "2025-12-11T19:05:01.765790Z", "event": "dispatch", "task_id": "0_0_-_6_0", "worker_id": "w1"}
-{"ts": "2025-12-11T19:05:01.766078Z", "event": "result_received", "task_id": "0_1_-_1_0", "worker_id": "w3", "latency_seconds": 0.0010292530059814453}
-{"ts": "2025-12-11T19:05:01.766189Z", "event": "dispatch", "task_id": "1_1_-_0_3", "worker_id": "w3"}
-{"ts": "2025-12-11T19:05:01.766465Z", "event": "result_received", "task_id": "0_0_+_6_0", "worker_id": "w2", "latency_seconds": 0.0011327266693115234}
-{"ts": "2025-12-11T19:05:01.766575Z", "event": "dispatch", "task_id": "0_1_+_1_0", "worker_id": "w2"}
-{"ts": "2025-12-11T19:05:01.766874Z", "event": "result_received", "task_id": "0_0_-_6_0", "worker_id": "w1", "latency_seconds": 0.0010907649993896484}
-{"ts": "2025-12-11T19:05:01.767177Z", "event": "result_received", "task_id": "1_1_-_0_3", "worker_id": "w3", "latency_seconds": 0.0009794235229492188}
-{"ts": "2025-12-11T19:05:01.767463Z", "event": "result_received", "task_id": "0_1_+_1_0", "worker_id": "w2", "latency_seconds": 0.0008826255798339844}
-{"ts": "2025-12-11T19:05:01.767661Z", "event": "aggregation_done", "elapsed_seconds": 1.0171310901641846, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T19:05:01.767810Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T19:05:01.767904Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T19:05:01.768863Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:05:01.769118Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:05:01.769281Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:05:01.769492Z", "event": "server_stop"}
-{"ts": "2025-12-11T19:06:02.637262Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T19:06:02.637520Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T19:06:03.649351Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T19:06:03.650423Z", "event": "worker_disconnect", "worker_id": "w2", "error": "received 1000 (OK); then sent 1000 (OK)"}
-{"ts": "2025-12-11T19:06:03.651294Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T19:06:03.652055Z", "event": "worker_disconnect", "worker_id": "w1", "error": "received 1000 (OK); then sent 1000 (OK)"}
-{"ts": "2025-12-11T19:06:03.652529Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T19:06:03.653132Z", "event": "worker_disconnect", "worker_id": "w3", "error": "received 1000 (OK); then sent 1000 (OK)"}
-{"ts": "2025-12-11T19:07:01.245070Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T19:07:01.245316Z", "event": "dispatch", "task_id": "0_1_-_2_7", "worker_id": "w2"}
-{"ts": "2025-12-11T19:07:01.245622Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T19:07:01.245759Z", "event": "dispatch", "task_id": "0_0_-_6_0", "worker_id": "w3"}
-{"ts": "2025-12-11T19:07:01.246032Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T19:07:01.246150Z", "event": "dispatch", "task_id": "1_0_+_4_4", "worker_id": "w1"}
-{"ts": "2025-12-11T19:07:01.246426Z", "event": "result_received", "task_id": "0_1_-_2_7", "worker_id": "w2", "latency_seconds": 0.001104593276977539}
-{"ts": "2025-12-11T19:07:01.246558Z", "event": "dispatch", "task_id": "1_1_-_3_4", "worker_id": "w2"}
-{"ts": "2025-12-11T19:07:01.246868Z", "event": "result_received", "task_id": "0_0_-_6_0", "worker_id": "w3", "latency_seconds": 0.0010993480682373047}
-{"ts": "2025-12-11T19:07:01.246995Z", "event": "dispatch", "task_id": "1_1_+_3_4", "worker_id": "w3"}
-{"ts": "2025-12-11T19:07:01.247279Z", "event": "result_received", "task_id": "1_0_+_4_4", "worker_id": "w1", "latency_seconds": 0.0011260509490966797}
-{"ts": "2025-12-11T19:07:01.247397Z", "event": "dispatch", "task_id": "0_0_+_6_0", "worker_id": "w1"}
-{"ts": "2025-12-11T19:07:01.247656Z", "event": "result_received", "task_id": "1_1_-_3_4", "worker_id": "w2", "latency_seconds": 0.0010988712310791016}
-{"ts": "2025-12-11T19:07:01.247828Z", "event": "dispatch", "task_id": "1_0_-_4_4", "worker_id": "w2"}
-{"ts": "2025-12-11T19:07:01.248122Z", "event": "result_received", "task_id": "1_1_+_3_4", "worker_id": "w3", "latency_seconds": 0.0011212825775146484}
-{"ts": "2025-12-11T19:07:01.248245Z", "event": "dispatch", "task_id": "0_1_+_2_7", "worker_id": "w3"}
-{"ts": "2025-12-11T19:07:01.248528Z", "event": "result_received", "task_id": "0_0_+_6_0", "worker_id": "w1", "latency_seconds": 0.0011265277862548828}
-{"ts": "2025-12-11T19:07:01.248837Z", "event": "result_received", "task_id": "1_0_-_4_4", "worker_id": "w2", "latency_seconds": 0.0010104179382324219}
-{"ts": "2025-12-11T19:07:01.249127Z", "event": "result_received", "task_id": "0_1_+_2_7", "worker_id": "w3", "latency_seconds": 0.0008835792541503906}
-{"ts": "2025-12-11T19:07:01.249323Z", "event": "aggregation_done", "elapsed_seconds": 58.61167025566101, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T19:07:01.249450Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T19:07:01.249538Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T19:07:01.250309Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:07:01.250613Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:07:01.250837Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:07:01.251050Z", "event": "server_stop"}
-{"ts": "2025-12-11T19:08:02.432819Z", "event": "server_start", "host": "localhost", "port": 8080}
-{"ts": "2025-12-11T19:08:02.433133Z", "event": "tasks_pushed", "count": 8}
-{"ts": "2025-12-11T19:08:03.446399Z", "event": "worker_registered", "worker_id": "w3"}
-{"ts": "2025-12-11T19:08:03.446671Z", "event": "dispatch", "task_id": "0_1_+_0_4", "worker_id": "w3"}
-{"ts": "2025-12-11T19:08:03.446950Z", "event": "worker_registered", "worker_id": "w2"}
-{"ts": "2025-12-11T19:08:03.447147Z", "event": "dispatch", "task_id": "0_0_-_0_7", "worker_id": "w2"}
-{"ts": "2025-12-11T19:08:03.447444Z", "event": "result_received", "task_id": "0_1_+_0_4", "worker_id": "w3", "latency_seconds": 0.0007822513580322266}
-{"ts": "2025-12-11T19:08:03.447562Z", "event": "dispatch", "task_id": "1_1_+_6_5", "worker_id": "w3"}
-{"ts": "2025-12-11T19:08:03.448024Z", "event": "result_received", "task_id": "0_0_-_0_7", "worker_id": "w2", "latency_seconds": 0.0008709430694580078}
-{"ts": "2025-12-11T19:08:03.448141Z", "event": "dispatch", "task_id": "1_0_+_1_0", "worker_id": "w2"}
-{"ts": "2025-12-11T19:08:03.448463Z", "event": "result_received", "task_id": "1_1_+_6_5", "worker_id": "w3", "latency_seconds": 0.0008966922760009766}
-{"ts": "2025-12-11T19:08:03.448575Z", "event": "dispatch", "task_id": "0_0_+_0_7", "worker_id": "w3"}
-{"ts": "2025-12-11T19:08:03.449169Z", "event": "result_received", "task_id": "1_0_+_1_0", "worker_id": "w2", "latency_seconds": 0.0010259151458740234}
-{"ts": "2025-12-11T19:08:03.449284Z", "event": "dispatch", "task_id": "1_0_-_1_0", "worker_id": "w2"}
-{"ts": "2025-12-11T19:08:03.449574Z", "event": "result_received", "task_id": "0_0_+_0_7", "worker_id": "w3", "latency_seconds": 0.0009932518005371094}
-{"ts": "2025-12-11T19:08:03.449696Z", "event": "dispatch", "task_id": "1_1_-_6_5", "worker_id": "w3"}
-{"ts": "2025-12-11T19:08:03.450031Z", "event": "worker_registered", "worker_id": "w1"}
-{"ts": "2025-12-11T19:08:03.450143Z", "event": "result_received", "task_id": "1_0_-_1_0", "worker_id": "w2", "latency_seconds": 0.0008585453033447266}
-{"ts": "2025-12-11T19:08:03.450258Z", "event": "dispatch", "task_id": "0_1_-_0_4", "worker_id": "w2"}
-{"ts": "2025-12-11T19:08:03.450701Z", "event": "result_received", "task_id": "1_1_-_6_5", "worker_id": "w3", "latency_seconds": 0.0009913444519042969}
-{"ts": "2025-12-11T19:08:03.451005Z", "event": "result_received", "task_id": "0_1_-_0_4", "worker_id": "w2", "latency_seconds": 0.0007412433624267578}
-{"ts": "2025-12-11T19:08:03.451198Z", "event": "aggregation_done", "elapsed_seconds": 1.0179219245910645, "matrix": [[58, 64], [139, 154]]}
-{"ts": "2025-12-11T19:08:03.451326Z", "event": "matrix_row", "row": [58, 64]}
-{"ts": "2025-12-11T19:08:03.451413Z", "event": "matrix_row", "row": [139, 154]}
-{"ts": "2025-12-11T19:08:03.452333Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:08:03.452594Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:08:03.452809Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
-{"ts": "2025-12-11T19:08:03.453026Z", "event": "server_stop"}
+{"ts": "2025-12-11T19:11:25.399822Z", "event": "server_start", "host": "localhost", "port": 8080}
+{"ts": "2025-12-11T19:11:25.400131Z", "event": "tasks_pushed", "count": 8}
+{"ts": "2025-12-11T19:11:26.410639Z", "event": "worker_registered", "worker_id": "w1"}
+{"ts": "2025-12-11T19:11:26.411011Z", "event": "dispatch", "task_id": "1_0_-_1_1", "worker_id": "w1"}
+{"ts": "2025-12-11T19:11:26.411262Z", "event": "worker_registered", "worker_id": "w2"}
+{"ts": "2025-12-11T19:11:26.411352Z", "event": "dispatch", "task_id": "0_1_-_7_1", "worker_id": "w2"}
+{"ts": "2025-12-11T19:11:26.411657Z", "event": "result_received", "task_id": "1_0_-_1_1", "worker_id": "w1", "latency_seconds": 0.0006494522094726562}
+{"ts": "2025-12-11T19:11:26.411760Z", "event": "dispatch", "task_id": "1_1_+_7_5", "worker_id": "w1"}
+{"ts": "2025-12-11T19:11:26.412176Z", "event": "result_received", "task_id": "0_1_-_7_1", "worker_id": "w2", "latency_seconds": 0.0008184909820556641}
+{"ts": "2025-12-11T19:11:26.412272Z", "event": "dispatch", "task_id": "1_1_-_7_5", "worker_id": "w2"}
+{"ts": "2025-12-11T19:11:26.412499Z", "event": "result_received", "task_id": "1_1_+_7_5", "worker_id": "w1", "latency_seconds": 0.0007364749908447266}
+{"ts": "2025-12-11T19:11:26.412591Z", "event": "dispatch", "task_id": "0_0_+_1_0", "worker_id": "w1"}
+{"ts": "2025-12-11T19:11:26.412829Z", "event": "worker_registered", "worker_id": "w3"}
+{"ts": "2025-12-11T19:11:26.412912Z", "event": "dispatch", "task_id": "0_0_-_1_0", "worker_id": "w3"}
+{"ts": "2025-12-11T19:11:26.413118Z", "event": "result_received", "task_id": "1_1_-_7_5", "worker_id": "w2", "latency_seconds": 0.0008411407470703125}
+{"ts": "2025-12-11T19:11:26.413204Z", "event": "dispatch", "task_id": "0_1_+_7_1", "worker_id": "w2"}
+{"ts": "2025-12-11T19:11:26.413424Z", "event": "result_received", "task_id": "0_0_+_1_0", "worker_id": "w1", "latency_seconds": 0.0008296966552734375}
+{"ts": "2025-12-11T19:11:26.413510Z", "event": "dispatch", "task_id": "1_0_+_1_1", "worker_id": "w1"}
+{"ts": "2025-12-11T19:11:26.413733Z", "event": "result_received", "task_id": "0_0_-_1_0", "worker_id": "w3", "latency_seconds": 0.0008172988891601562}
+{"ts": "2025-12-11T19:11:26.413976Z", "event": "result_received", "task_id": "0_1_+_7_1", "worker_id": "w2", "latency_seconds": 0.0007627010345458984}
+{"ts": "2025-12-11T19:11:26.414209Z", "event": "result_received", "task_id": "1_0_+_1_1", "worker_id": "w1", "latency_seconds": 0.0006933212280273438}
+{"ts": "2025-12-11T19:11:26.414374Z", "event": "aggregation_done", "elapsed_seconds": 1.01413893699646, "matrix": [[58, 64], [139, 154]]}
+{"ts": "2025-12-11T19:11:26.414472Z", "event": "matrix_row", "row": [58, 64]}
+{"ts": "2025-12-11T19:11:26.414539Z", "event": "matrix_row", "row": [139, 154]}
+{"ts": "2025-12-11T19:11:26.415194Z", "event": "worker_disconnect", "worker_id": "w1", "error": "sent 1001 (going away); then received 1001 (going away)"}
+{"ts": "2025-12-11T19:11:26.415417Z", "event": "worker_disconnect", "worker_id": "w2", "error": "sent 1001 (going away); then received 1001 (going away)"}
+{"ts": "2025-12-11T19:11:26.415538Z", "event": "worker_disconnect", "worker_id": "w3", "error": "sent 1001 (going away); then received 1001 (going away)"}
+{"ts": "2025-12-11T19:11:26.415699Z", "event": "server_stop"}
