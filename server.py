@@ -1,5 +1,5 @@
+from datetime import datetime, UTC
 
-# server.py
 import asyncio
 import json
 import random
@@ -7,28 +7,64 @@ import logging
 from typing import Dict, Any
 import argparse
 import time
+from datetime import datetime
+from pathlib import Path
 
 import websockets
-from websockets.server import WebSocketServerProtocol
 
 import common
 import mask
 
-logging.basicConfig(level=logging.INFO)
+# --- Styling (ANSI) ---
+CSI = "\x1b["
+COLOR_RESET = CSI + "0m"
+COLOR_CYAN = CSI + "36m"
+COLOR_GREEN = CSI + "32m"
+COLOR_MAGENTA = CSI + "35m"
+
+# --- Logging setup (clean timestamps) ---
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s  %(message)s",
+    datefmt="%H:%M:%S"
+)
+
+def term(msg: str, color: str = ""):
+    if color:
+        return f"{color}{msg}{COLOR_RESET}"
+    return msg
+
+# Structured JSONL log file
+LOG_DIR = Path("logs")
+LOG_DIR.mkdir(exist_ok=True)
+SERVER_JSONL = LOG_DIR / "server.jsonl"
+
+def write_server_json(obj: dict):
+    try:
+        with SERVER_JSONL.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(obj, default=str) + "\n")
+    except Exception:
+        logging.exception("failed to write server jsonl")
+
+def iso_now():
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+def log(msg: str):
+    logging.info(term(f"[SERVER] {msg}", COLOR_CYAN))
 
 # Example matrices (small demo). Replace with larger or generator as needed.
 A = [
-    [1,2,3],
-    [4,5,6],
+    [1, 2, 3],
+    [4, 5, 6],
 ]
 B = [
-    [7,8],
-    [9,10],
-    [11,12],
+    [7, 8],
+    [9, 10],
+    [11, 12],
 ]
 
 class Worker:
-    def __init__(self, id: str, ws: WebSocketServerProtocol):
+    def __init__(self, id: str, ws):
         self.id = id
         self.ws = ws
 
@@ -58,6 +94,9 @@ class Server:
         self.masksB = []
         self.offsets = []
 
+        # for latency accounting
+        self.sent_at: Dict[str, float] = {}  # task_id -> epoch seconds
+
     async def handler(self, ws):
         try:
             raw = await ws.recv()
@@ -65,14 +104,15 @@ class Server:
             return
         msg = common.parse_message(raw)
         if msg.get("type") != common.MSG_REGISTER:
-            logging.info("expected register, got %s", msg)
+            log(f"expected register, got {msg}")
             await ws.close()
             return
         reg = msg.get("body", {})
         wid = reg.get("worker_id", f"w-{time.time()}")
         worker = Worker(wid, ws)
         self.workers[wid] = worker
-        logging.info("worker registered: %s", wid)
+        log(term(f"worker {wid} registered", COLOR_GREEN))
+        write_server_json({"ts": iso_now(), "event": "worker_registered", "worker_id": wid})
 
         try:
             while True:
@@ -82,23 +122,45 @@ class Server:
                 if typ == common.MSG_REQUEST:
                     try:
                         t = self.task_queue.get_nowait()
-                        logging.info("sending task %s -> worker %s", t.get("task_id"), wid)
+                        task_id = t.get("task_id")
+                        # record send time for latency
+                        self.sent_at[task_id] = time.time()
+                        log(term(f"→ task {task_id} → {wid}", COLOR_MAGENTA))
+                        write_server_json({
+                            "ts": iso_now(),
+                            "event": "dispatch",
+                            "task_id": task_id,
+                            "worker_id": wid
+                        })
                         await ws.send(common.make_message(common.MSG_TASK, t))
                     except asyncio.QueueEmpty:
-                        # no tasks
                         await ws.send(common.make_message(common.MSG_NO_TASK))
                 elif typ == common.MSG_RESULT:
                     body = msg.get("body", {})
-                    logging.info("received result from %s: %s", wid, body.get("task_id"))
+                    task_id = body.get("task_id")
+                    # compute latency if we dispatched it
+                    now = time.time()
+                    sent = self.sent_at.pop(task_id, None)
+                    latency = None
+                    if sent is not None:
+                        latency = max(0.0, now - sent)
+                    log(term(f"← result {task_id} ← {wid}", COLOR_MAGENTA))
+                    write_server_json({
+                        "ts": iso_now(),
+                        "event": "result_received",
+                        "task_id": task_id,
+                        "worker_id": wid,
+                        "latency_seconds": latency
+                    })
                     await self.result_queue.put(body)
                 else:
-                    logging.debug("unknown msg from worker %s: %s", wid, msg)
+                    logging.debug(f"unknown msg from worker {wid}: {msg}")
         except Exception as e:
-            logging.info("worker %s disconnected: %s", wid, e)
+            log(term(f"worker {wid} disconnected: {e}", COLOR_CYAN))
+            write_server_json({"ts": iso_now(), "event": "worker_disconnect", "worker_id": wid, "error": str(e)})
         finally:
             if wid in self.workers:
                 del self.workers[wid]
-
 
     def setup_masks(self):
         if not self.privacy:
@@ -149,7 +211,8 @@ class Server:
         random.shuffle(tasks)
         for t in tasks:
             await self.task_queue.put(t)
-        logging.info("pushed %d tasks", len(tasks))
+        log(term(f"pushed {len(tasks)} tasks", COLOR_CYAN))
+        write_server_json({"ts": iso_now(), "event": "tasks_pushed", "count": len(tasks)})
 
     async def aggregate(self):
         n = len(self.rows)
@@ -157,20 +220,25 @@ class Server:
         C = [[0 for _ in range(m)] for __ in range(n)]
         pending = n * m
         start = time.time()
+        per_task_latencies = []  # collect latencies for stats
         while pending > 0:
             try:
                 body = await asyncio.wait_for(self.result_queue.get(), timeout=self.timeout)
             except asyncio.TimeoutError:
-                logging.info("aggregation timeout")
+                log(term("aggregation timeout", COLOR_CYAN))
+                write_server_json({"ts": iso_now(), "event": "aggregation_timeout"})
                 break
             tid = body.get("task_id")
             dot = int(body.get("dot"))
+            # compute latency if available in JSONL or server.sent_at (we logged earlier)
             # parse privacy id pattern
             parts = tid.split("_")
             if len(parts) >= 5 and (parts[2] == '+' or parts[2] == '-'):
-                i = int(parts[0]); j = int(parts[1])
+                i = int(parts[0])
+                j = int(parts[1])
                 sign = parts[2]
-                ri = int(parts[3]); rj = int(parts[4])
+                ri = int(parts[3])
+                rj = int(parts[4])
                 key = f"{i}_{j}"
                 ps = self.state.get(key)
                 if ps is None:
@@ -189,21 +257,29 @@ class Server:
                     del self.state[key]
             else:
                 # plain task id "<i>_<j>"
-                i,j = map(int, tid.split("_"))
+                i, j = map(int, tid.split("_"))
                 C[i][j] = dot
                 pending -= 1
 
+            # attempt to parse latency if present in server.jsonl (not necessary)
+            # (server recorded latency at reception and wrote to JSONL already)
         elapsed = time.time() - start
-        logging.info("Aggregation done in %.3fs", elapsed)
-        logging.info("Result C:")
+        log(term(f"aggregation done in {elapsed:.3f}s", COLOR_GREEN))
+        write_server_json({"ts": iso_now(), "event": "aggregation_done", "elapsed_seconds": elapsed, "matrix": C})
+
+        log(term("C =", COLOR_CYAN))
         for row in C:
-            logging.info(" ".join(str(x) for x in row))
+            row_s = " ".join(str(x) for x in row)
+            log(f"[ {row_s} ]")
+            # also write each row as structured line
+            write_server_json({"ts": iso_now(), "event": "matrix_row", "row": row})
 
     async def serve(self):
         self.setup_masks()
         # start websocket server
         server = await websockets.serve(self.handler, self.host, self.port)
-        logging.info("Server listening on ws://%s:%d", self.host, self.port)
+        log(term(f"Server listening on ws://{self.host}:{self.port}", COLOR_CYAN))
+        write_server_json({"ts": iso_now(), "event": "server_start", "host": self.host, "port": self.port})
 
         # generate tasks
         await self.generate_tasks()
@@ -214,6 +290,7 @@ class Server:
         # close server
         server.close()
         await server.wait_closed()
+        write_server_json({"ts": iso_now(), "event": "server_stop"})
 
 def main():
     parser = argparse.ArgumentParser()
